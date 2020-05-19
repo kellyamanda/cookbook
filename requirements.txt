@@ -1,0 +1,4 @@
+plotly
+seaborn
+vega_datasets
+wordcloud
