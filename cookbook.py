@@ -160,27 +160,27 @@ if cookbook == "Advanced selectbox":
 
     "### Example 2"
     with st.echo():
-        from vega_datasets import data
+        #from vega_datasets import data
 
         @st.cache
         def load_data():
-            return data.birdstrikes()
+            return pd.read_csv("https://raw.githubusercontent.com/vega/vega-datasets/master/data/birdstrikes.csv")
 
         cols = {
-            "Airport__Name": "Airport Name",
-            "Aircraft__Make_Model": "Aircraft Make & Model",
-            "Effect__Amount_of_damage": "Effect: Amount of Damage",
-            "Flight_Date": "Flight Date",
-            "Aircraft__Airline_Operator": "Airline Operator",
-            "Origin_State": "Origin State",
-            "When__Phase_of_flight": "When (Phase of Flight)",
-            "Wildlife__Size": "Wildlife Size",
-            "Wildlife__Species": "Wildlife Species",
-            "When__Time_of_day": "When (Time of Day)",
-            "Cost__Other": "Cost (Other)",
-            "Cost__Repair": "Cost (Repair)",
-            "Cost__Total_$": "Cost (Total) ($)",
-            "Speed_IAS_in_knots": "Speed (in Knots)",
+            "Airport Name": "Airport Name",
+            "Aircraft Make Model": "Aircraft Make & Model",
+            "Effect Amount of damage": "Effect: Amount of Damage",
+            "Flight Date": "Flight Date",
+            "Aircraft Airline Operator": "Airline Operator",
+            "Origin State": "Origin State",
+            "Phase of flight": "When (Phase of Flight)",
+            "Wildlife Size": "Wildlife Size",
+            "Wildlife Species": "Wildlife Species",
+            "Time of day": "When (Time of Day)",
+            "Cost Other": "Cost (Other)",
+            "Cost Repair": "Cost (Repair)",
+            "Cost Total $": "Cost (Total) ($)",
+            "Speed IAS in knots": "Speed (in Knots)",
         }
 
         dataset = load_data()
